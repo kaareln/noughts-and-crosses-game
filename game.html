@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Kułko i krzyżyk</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet"  href="game.css" />
+    <link rel="stylesheet" href="bootstrap-grid.css" />
+    
+  </head>
+  <body>
+    <div id="app">
+        <header>
+            <h1>Kułko i krzyżyk</h1>
+        </header>
+        <div class="board">
+            <div class="container">
+                <div class="row">
+                    <div class="col colo colp"
+                    @mouseover="currentPlace = 0"
+                    @click="move(0)">
+                    <h1 v-show="signs[0] === 'X'">X</h1> 
+                    <h1 v-show="signs[0] === 'O'">O</h1>  
+
+                    </div>
+                    <div class="col colo colp" 
+                    @mouseover="currentPlace = 1"
+                    @click="move(1)">
+                    <h1 v-show="signs[1] === 'X'">X</h1> 
+                    <h1 v-show="signs[1] === 'O'">O</h1> 
+                    </div>
+                    <div class="col colp" 
+                    @mouseover="currentPlace = 2"
+                    @click="move(2)">
+                    <h1 v-show="signs[2] === 'X'">X</h1> 
+                    <h1 v-show="signs[2] === 'O'">O</h1> 
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col colo colp"
+                    @mouseover="currentPlace = 3"
+                    @click="move(3)">
+                    <h1 v-show="signs[3] === 'X'">X</h1> 
+                    <h1 v-show="signs[3] === 'O'">O</h1> 
+
+                    </div>
+                    <div class="col colo colp"
+                    @mouseover="currentPlace = 4"
+                    @click="move(4)">
+                    <h1 v-show="signs[4] === 'X'">X</h1> 
+                    <h1 v-show="signs[4] === 'O'">O</h1> 
+
+                    </div>
+                    <div class="col colp"
+                    @mouseover="currentPlace = 5"
+                    @click="move(5)">
+                    <h1 v-show="signs[5] === 'X'">X</h1> 
+                    <h1 v-show="signs[5] === 'O'">O</h1> 
+
+                    </div>
+           
+                </div>
+                <div class="row">
+                    <div class="col colo colp"
+                    @mouseover="currentPlace = 6"
+                    @click="move(6)">
+                    <h1 v-show="signs[6] === 'X'">X</h1> 
+                    <h1 v-show="signs[6] === 'O'">O</h1> 
+
+                    </div>
+                    <div class="col colo colp"
+                    @mouseover="currentPlace = 7"
+                    @click="move(7)">
+                    <h1 v-show="signs[7] === 'X'">X</h1> 
+                    <h1 v-show="signs[7] === 'O'">O</h1> 
+
+                    </div>
+                    <div class="col colp"
+                    @mouseover="currentPlace = 8"
+                    @click="move(8)">
+                    <h1 v-show="signs[8] === 'X'">X</h1> 
+                    <h1 v-show="signs[8] === 'O'">O</h1> 
+
+                    </div>
+           
+                </div>
+        </div>
+    </div>
+    <h2>{{ currentPlace }}</h2>
+    <div v-if="!startGamee">
+    <div class="butt"
+    v-if="!startGame">
+        <button @click="gameStart" >
+            Rozpocznij grę
+        </button>
+    </div>
+    <div class="pionki" v-else>
+        <h4> Wybierz, kturymi chcesz rozpocząć: </h4>
+        <div class="container">
+            <div class="row">
+                <div class="col colos" id="first"
+                @click="gameeStart('X')">
+                    <p>X</p>
+                </div>
+                <div class="col colos" id="second"
+                @click="gameeStart('O')">
+                    <p>O</p>
+                </div>
+            </div>
+    </div>
+    </div>
+</div>
+    <div v-else>
+        <h2 v-show="!fullCheck && !gameEnded">Następny ruch: {{ nextTurn }}</h2>
+    </div>
+    <h1 v-show="gameEnded">Wygrały: {{ nextTurn }}</h1>
+    </div>
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>

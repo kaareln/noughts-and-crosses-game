@@ -1,0 +1,91 @@
+.board {
+    border: 4px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 299px;
+    text-align: center;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.colp {
+    
+    height: 98px;
+    
+    border-bottom: 2px solid black;
+}
+
+.colo {
+    border-right: 2px solid black;
+}
+
+.butt {
+    margin: auto;
+    text-align: center;
+}
+
+#app {
+    margin: auto;
+    height: 500px;
+    width: 500px;
+}
+
+.pionki {
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.colos {
+    margin: auto;
+    text-align: center;
+    
+    
+}
+
+#first {
+    background-color: rgb(41, 128, 41);
+    border-radius: 10px;
+    height: 70px;
+    
+}
+
+#first:hover {
+    background-color: rgb(91, 178, 91);
+    border-radius: 10px;
+    height: 70px;
+    
+}
+
+#second {
+    background-color: rgb(39, 58, 145);
+    border-radius: 10px;
+    height: 70px;
+    
+}
+
+#second:hover {
+    background-color: rgb(89, 108, 195);
+    border-radius: 10px;
+    height: 70px;
+}
+P {
+    margin-top: 25px;
+}
+
+h4 {
+    text-align: center;
+}
